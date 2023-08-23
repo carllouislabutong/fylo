@@ -197,6 +197,7 @@ main {
   text-align: center;
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 11rem;
   margin-top: -7rem;
   z-index: 3;
@@ -215,6 +216,9 @@ main {
 
 .second-section-logo {
   margin-top: 7rem;
+}
+.third-section-block{
+  margin-top: -5rem;
 }
 
 .fourth-section-logo {
