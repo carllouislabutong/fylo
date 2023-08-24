@@ -117,7 +117,7 @@ nav {
 .nav-flex ul {
   display: flex;
   gap: 2rem;
-  font-size: .9rem;
+  font-size: clamp(.7rem, 2vw, .9rem);
   font-weight: 100;
 }
 
@@ -217,9 +217,7 @@ main {
 .second-section-logo {
   margin-top: 7rem;
 }
-.third-section-block{
-  margin-top: -5rem;
-}
+
 
 .fourth-section-logo {
   margin-top: 7rem;
@@ -231,6 +229,7 @@ main {
   justify-content: center;
   gap: 4rem;
   align-items: center;
+  flex-wrap: wrap;
 
 }
 
@@ -443,6 +442,7 @@ footer {
   justify-content: space-between;
   align-items: flex-start;
   margin-top: 2rem;
+  
 }
 
 .footer-info-area p {
@@ -491,11 +491,55 @@ footer {
   .menu-bar{
     display: block;
   }
-  .nav-bar{
-    display: none;
-  }
-  
   .wave {
   transform: translateY(-100px) translateX(170px) scale(1.7);
   }
+  .third-section-block{
+    margin-top: -5rem;
+  }
+  .third-section-block .third-section-logo p span{
+    display: inline;
+  }
+  .second-section .productive h1{
+    font-size: 1.1rem;
+  }
+  .productive{
+    max-width: 800px;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .second-section h1 span{
+    display: inline;
+  }
+  .footer-info-area{
+    flex-direction: column ;
+    row-gap: 3rem;
+  }
+  .footer-info-nav{
+    flex-direction: column;
+  }
+  .footer-info-nav ul{
+    margin: 0;
+    padding: 0;
+  }
+  .sm-icons{
+    align-self: center;
+  }
+  .third-section-flex{
+    justify-content: center;
+  }
+  .nav-logo svg{
+    width: 60px;
+    height: 60px;
+  }
+ 
 }
+@media screen and (min-width: 601px) {
+  .third-section-block .third-section-logo p span{
+    display: block;
+  }
+  .second-section h1 span{
+    display: block;
+  }
+}
+
