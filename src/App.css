@@ -202,7 +202,6 @@ main {
   margin-top: -7rem;
   z-index: 3;
   flex-wrap: wrap;
-  padding-top: 9rem;
 }
 
 .first-section h1 {
@@ -486,8 +485,36 @@ footer {
   gap: 1rem;
 }
 
+.burger-menu{
+  display: none;
+}
+.open-nav{
+  display: block !important;
+  top: 6rem !important;
+}
 
 @media screen and (max-width: 600px) {
+  .burger-menu{
+    position: relative;
+    display: block;
+  }
+  .nav-bar{
+    display: none;
+    position: absolute;
+    left: 3rem;
+    right: 3rem;
+    top: -12rem;
+    background-color: var(--DarkBlueFB);
+    width: 80%;
+    border-radius: 2rem;
+    opacity: .8 ;
+    padding: 1rem;
+  }
+  .nav-bar ul{
+    flex-direction: column ;
+    align-items: center;
+    padding-left: 0;
+  }
   .menu-bar{
     display: block;
   }
@@ -528,9 +555,8 @@ footer {
   .third-section-flex{
     justify-content: center;
   }
-  .nav-logo svg{
-    width: 60px;
-    height: 60px;
+  .first-section{
+    padding-top: 9rem;
   }
  
 }

@@ -12,14 +12,21 @@ import prof3 from "./assets/profile-3.jpg";
 import {FiTwitter} from "react-icons/fi";
 import {BsFacebook} from "react-icons/bs";
 import{BsInstagram} from "react-icons/bs";
-import {BiMenuAltRight} from "react-icons/bi";
-import {ImCancelCircle} from "react-icons/im"
+import {HiMenuAlt2} from "react-icons/hi"
+import {ImCancelCircle} from "react-icons/im";
 
 function App() {
   useEffect(()=>{
     AOS.init();
   },[]);
 
+  const[changeIcon, setChangeIcon] = useState(false);
+
+  const changeIconLook = () =>{
+    setChangeIcon(!changeIcon)
+    const navMenu = document.querySelector(".nav-bar");
+    navMenu.classList.toggle("open-nav")
+  }
   return (
     <div>
       <nav>
@@ -43,6 +50,12 @@ function App() {
                 <a href="#">Sign in</a>
               </li>
             </ul>
+          </div>
+          <div className="burger-menu" onClick={changeIconLook}>
+             {
+              changeIcon ?  
+              <ImCancelCircle style={{color:"white"}} /> : <HiMenuAlt2 style={{color:"white"}}/>  
+             }
           </div>
         </div>
         <section className="introImg" data-aos="fade-up">
