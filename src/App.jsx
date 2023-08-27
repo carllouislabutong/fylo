@@ -14,6 +14,7 @@ import {BsFacebook} from "react-icons/bs";
 import{BsInstagram} from "react-icons/bs";
 import {HiMenuAlt2} from "react-icons/hi"
 import {ImCancelCircle} from "react-icons/im";
+import {Helmet} from "react-helmet";
 
 function App() {
   useEffect(()=>{
@@ -29,6 +30,10 @@ function App() {
   }
   return (
     <div>
+       <Helmet>
+       <title>Fylo Landing page</title>
+        <meta name="fylo" content="landing page" />
+      </Helmet>
       <nav>
         <div className="nav-width nav-flex">
           <div className="nav-logo" >
